@@ -1,6 +1,6 @@
 {
   "name": "11ty",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An Eleventy wrapper for type supported configuration.",
   "keywords": [
     "11ty",
@@ -9,6 +9,13 @@
     "declarations",
     "wrapper"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panoply/11ty"
+  },
+  "bugs": {
+    "url": "https://github.com/panoply/11ty/issues"
+  },
   "type": "module",
   "types": "./index.d.ts",
   "module": "./index.mjs",
