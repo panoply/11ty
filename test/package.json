@@ -1,0 +1,33 @@
+{
+  "name": "11ty-test",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "11ty Test wrapper",
+  "scripts": {
+    "dev": "eleventy --config=scripts/eleventy.cjs --serve --watch",
+    "build": "tsc",
+    "postversion": "pnpm bump",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prettier": "@sissel/prettier-config",
+  "eslintConfig": {
+    "extends": "@sissel/eslint-config",
+    "ignorePatterns": [
+      "dist"
+    ]
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-navigation": "^0.3.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@sardine/eleventy-plugin-tinyhtml": "^0.2.0"
+  },
+  "peerDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  },
+  "dependencies": {
+    "11ty": "link:..",
+    "@types/browser-sync": "^2.26.3"
+  }
+}

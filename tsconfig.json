@@ -1,0 +1,12 @@
+{
+  "extends": "@sissel/tsconfig",
+  "exclude": ["node_modules"],
+  "include": ["src/index.ts"],
+  "compilerOptions": {
+    "outDir": ".",
+    "lib": ["ES2016"],
+    "incremental": false,
+    "skipLibCheck": true,
+    "target": "ES2016"
+  }
+}

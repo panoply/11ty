@@ -1,0 +1,1 @@
+export default cb => cb;
