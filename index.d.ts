@@ -167,7 +167,7 @@ interface ShortCodes {
 }
 
 
-export declare interface PluginExtend<Options = {}> {
+export declare interface PluginExtend {
   /**
    * Add an Eleventy Plugin.
    *
@@ -176,7 +176,7 @@ export declare interface PluginExtend<Options = {}> {
    *
    * [11ty Docs](https://www.11ty.dev/docs/plugins/)
    */
-   addPlugin<F = any>(plugin: F, options?: Options): void;
+   addPlugin<O, F extends (o: O) => unknown>(plugin: F, options?: O): void
 }
 
 export declare interface EleventyConfig extends Filters, ShortCodes, PluginExtend {

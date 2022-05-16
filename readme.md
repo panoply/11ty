@@ -1,4 +1,4 @@
-# 11ty (Type Support)
+# @panoply/11ty (Type Support)
 
 Shareable [Eleventy](https://www.11ty.dev/) configuration strap. The module can be dropped in to your `.eleventy.js` configuration file for Typed supported configuration options.
 
@@ -15,10 +15,10 @@ Type support is assumed nowadays and when modules don't provide this basic capab
 
 # Install
 
-Keep in mind that this module despite using the 11ty registry name it exists as a convenience wrapper. The module requires [@11ty/eleventy](https://www.npmjs.com/package/@11ty/eleventy) be installed along side it.
+The module requires [@11ty/eleventy](https://www.npmjs.com/package/@11ty/eleventy) be installed along side it.
 
 ```cli
-pnpm add 11ty @11ty/eleventy -D
+pnpm add @panoply/11ty @11ty/eleventy -D
 ```
 
 > The `@11ty/eleventy` module is a peer. You need to install it.
@@ -29,7 +29,7 @@ Pass it to the `module.exports` within a `.eleventy.js` or `.eleventy.cjs` confi
 
 <!-- prettier-ignore -->
 ```ts
-const eleventy = require("11ty");
+const eleventy = require("@panoply/11ty");
 
 module.exports = eleventy(function(config) {
 

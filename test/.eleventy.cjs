@@ -5,7 +5,10 @@ const htmlmin = require('@sardine/eleventy-plugin-tinyhtml');
 
 module.exports = eleventy(function (config) {
 
-  config.addPlugin(highlight)
+  config.addPlugin(highlight, {
+
+  })
+
   config.addPlugin(navigation)
 
 
