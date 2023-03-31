@@ -1,8 +1,7 @@
 /* eslint-disable no-use-before-define */
-import { Options as BrowserSyncOptions } from 'browser-sync';
-import * as plugins from './plugins'
+import type { Options as BrowserSyncOptions } from 'browser-sync';
 
-type Join<S extends Array<string | number>, D extends string,> = S extends []
+type Join<S extends Array<string | number>, D extends string, > = S extends []
   ? ''
   : S extends [string | number]
   ? `${S[0]}`
@@ -37,17 +36,17 @@ type EventNames = (
   | 'eleventy.beforeWatch'
 )
 
-type Plugin<Options = undefined> = (
-  | PluginFunction<Options>
-  | PluginObject<Options>
-);
+// declare type Plugin<Options = undefined> = (
+//   | PluginFunction<Options>
+//   | PluginObject<Options>
+// );
 
-type PluginFunction<Options> = (eleventyConfig: EleventyConfig, options: Options) => void;
+// interface PluginObject<Options> {
+//   initArguments?: object;
+//   configFunction: PluginFunction<Options>;
+// }
 
-interface PluginObject<Options> {
-  initArguments?: object;
-  configFunction: PluginFunction<Options>;
-}
+// type PluginFunction<Options> = (eleventyConfig: EleventyConfig, options: Options) => void;
 
 type AsyncFilter = (error: unknown | null, result?: any) => void;
 
@@ -166,7 +165,6 @@ interface ShortCodes {
   ): void;
 }
 
-
 export declare interface PluginExtend {
   /**
    * Add an Eleventy Plugin.
@@ -198,7 +196,7 @@ export declare interface EleventyConfig extends Filters, ShortCodes, PluginExten
    * [11ty Docs](https://www.11ty.dev/docs/config/#template-formats)
    *
    */
-  setTemplateFormats(formats: readonly TemplateEngines[] | Join<TemplateEngines[], ','> ): void;
+  setTemplateFormats(formats: readonly TemplateEngines[] | Join<TemplateEngines[], ','>): void;
   /**
    * Use a full deep merge when combining the Data Cascade.
    * This will use something similar to lodash.mergewith to
@@ -212,7 +210,9 @@ export declare interface EleventyConfig extends Filters, ShortCodes, PluginExten
    */
   setDataDeepMerge(deepMerge: boolean): void;
 
-  // Customize front matter parsing
+  /**
+   * Customize front matter parsing
+   */
   setFrontMatterParsingOptions(options: any): void;
 
   /**
@@ -370,7 +370,7 @@ export declare interface EleventyConfig extends Filters, ShortCodes, PluginExten
    * [11ty Docs](https://www.11ty.dev/docs/shortcodes/#shortcodes)
    *
    */
-  addShortcode( shortcodeName: string, filter: (...args: any[]) => string | PromiseLike<string>): void;
+  addShortcode(shortcodeName: string, filter: (...args: any[]) => string | PromiseLike<string>): void;
   /**
    * The real ultimate power of Shortcodes comes when they are paired.
    * Paired Shortcodes have a start and end tag—and allow you to nest other template
@@ -473,9 +473,6 @@ declare interface ReturnConfig {
  *
  * A simpler static site generator.
  */
-declare type Eleventy = (eleventyConfig: EleventyConfig) => ReturnConfig | undefined;
-
-
-declare const Eleventy: (eleventy: Eleventy) => void;
+declare const Eleventy: (eleventy: ((eleventyConfig: EleventyConfig) => ReturnConfig | undefined)) => void;
 
 export = Eleventy
