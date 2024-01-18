@@ -1,6 +1,6 @@
 {
   "name": "@panoply/11ty",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "An Eleventy wrapper for type supported configuration.",
   "keywords": [
     "11ty",
@@ -40,15 +40,15 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@sissel/eslint-config": "^1.1.0",
-    "@sissel/prettier-config": "^1.1.0",
+    "@sissel/eslint-config": "^1.2.1",
+    "@sissel/prettier-config": "^1.2.5",
     "@sissel/tsconfig": "^1.0.0",
-    "typescript": "^5.0.3"
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "@11ty/eleventy": "^2.0.1"
   },
   "dependencies": {
-    "@types/browser-sync": "^2.27.0"
+    "@types/browser-sync": "^2.29.0"
   }
 }
