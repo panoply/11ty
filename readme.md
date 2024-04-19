@@ -1,3 +1,15 @@
+<pre><code><strong>
+  <i>PROJECT HAS MOVED</i></strong>
+<p><i>
+  This project has a new home! Install via the NPM Registry <b>11ty.ts</b></i>
+</p>
+  → <a href="https://github.com/panoply/e11ty/tree/master/plugins/11ty.ts"><i>11ty.ts Repository</i></a>
+  → <a href="https://www.npmjs.com/package/11ty.ts"><i>NPM Registry/i></a>
+
+</code></pre>
+
+---
+
 # @panoply/11ty (Type Support)
 
 Shareable [Eleventy](https://www.11ty.dev/) configuration strap. The module can be dropped in to your `.eleventy.js` configuration file for Typed supported configuration options.
